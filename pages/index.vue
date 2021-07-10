@@ -65,7 +65,4 @@ body {
   max-width: 100% !important;
   margin: 0 auto;
 }
-// .exo-font {
-//   font-family: 'Exo', 'Roboto Mono', 'Fira Code', monospace !important;
-// }
 </style>

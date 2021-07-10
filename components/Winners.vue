@@ -125,7 +125,7 @@ export default {
   },
   methods: {
     play() {
-      this.sound.play()
+      // this.sound.play()
       setTimeout(() => (this.show = true), 300)
       clearTimeout()
     },
