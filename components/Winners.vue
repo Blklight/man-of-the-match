@@ -1,8 +1,14 @@
 <template>
-  <div class="container">
+  <div class="container px-0">
     <div :class="show ? 'fade-out-bottom' : ''">
       <button
-        class="btn btn-flat btn-block btn-teal mx-auto d-block px-4"
+        class="
+          btn btn-raised btn-flat btn-block btn-lg btn-teal
+          text-polen
+          mx-auto
+          d-block
+          px-4
+        "
         @click="play"
       >
         Ver o(s) vencedor(es)!
@@ -10,9 +16,9 @@
     </div>
 
     <div v-if="show" :class="show ? 'fade-in-bottom' : ''">
-      <div class="font-monospace mb-4">
+      <div class="font-monospace mb-5">
         <h2 class="mb-3">
-          <span class="bg-teal py-2 px-2">
+          <span class="bg-teal text-polen py-2 px-2">
             <strong class="marker-line"><em>Vencedor(es)</em></strong>
           </span>
         </h2>
@@ -24,20 +30,18 @@
         />
         <p class="text-teal text-center my-3">
           <em>
-            <a
-              :href="winnerHD"
-              class="marker marker-link marker-teal mx-1"
-              target="_blank"
-            >
-              Clique aqui
+            <a :href="winnerHD" class="text-polen mx-1" target="_blank">
+              <span class="marker-line bg-teal text-polen py-1">
+                Clique aqui
+              </span>
             </a>
             para baixar a versão em HD.
           </em>
         </p>
       </div>
-      <div class="font-monospace mb-4">
+      <div class="font-monospace mb-5">
         <h3 class="mb-3">
-          <span class="bg-teal py-2 px-2">
+          <span class="bg-teal text-polen py-2 px-2">
             <strong class="marker-line"><em> 2ª colocação </em></strong>
           </span>
         </h3>
@@ -45,9 +49,9 @@
           <em>"{{ second.quote }}" - {{ second.name }}</em>
         </p>
       </div>
-      <div class="font-monospace mb-4">
+      <div class="font-monospace mb-5">
         <h3 class="mb-3">
-          <span class="bg-teal py-2 px-2">
+          <span class="bg-teal text-polen py-2 px-2">
             <strong class="marker-line"><em> 3ª colocação </em></strong>
           </span>
         </h3>
@@ -55,13 +59,13 @@
           <em>"{{ third.quote }}" - {{ third.name }}</em>
         </p>
       </div>
-      <div class="mb-4">
+      <div class="font-monospace mb-5">
         <h2 class="mb-3">
-          <span class="bg-teal py-2 px-2">
+          <span class="bg-teal text-polen py-2 px-2">
             <strong><em> Bônus </em></strong>
           </span>
         </h2>
-        <h4 class="bg-teal py-2 px-2 mb-3">
+        <h4 class="bg-teal text-polen py-2 px-2 mb-3">
           <span class="">
             <strong><em> Daft Vitola - Wallpaper </em></strong>
           </span>
@@ -74,12 +78,10 @@
         />
         <p class="text-teal text-center my-3">
           <em>
-            <a
-              :href="daftHD"
-              class="marker marker-link marker-teal mx-1"
-              target="_blank"
-            >
-              Clique aqui
+            <a :href="daftHD" class="text-polen mx-1" target="_blank">
+              <span class="marker-line bg-teal text-polen py-1">
+                Clique aqui
+              </span>
             </a>
             para baixar a versão em HD.
           </em>
@@ -89,50 +91,50 @@
   </div>
 </template>
 <script>
-import { Howl } from 'howler'
+import { Howl } from "howler";
 
-import urna from '@/assets/audio/urna.mp3'
+import urna from "@/assets/audio/urna.mp3";
 
-import dataSecond from '~/assets/data/seconds.json'
-import dataThird from '~/assets/data/thirds.json'
+import dataSecond from "~/assets/data/seconds.json";
+import dataThird from "~/assets/data/thirds.json";
 
 export default {
   data() {
     return {
-      sound: '',
+      sound: "",
       show: false,
-      winnerName: 'Ultimate',
-      winner: 'https://i.imgur.com/qb7PZXm.jpg',
-      winnerHD: 'https://i.imgur.com/cSRyYIx.jpg',
-      daft: 'https://i.imgur.com/3ndugq6.jpg',
-      daftHD: 'https://i.imgur.com/bZQauq4.jpg',
+      winnerName: "Ultimate",
+      winner: "https://i.imgur.com/tjVBugA.jpg",
+      winnerHD: "https://i.imgur.com/fKMl9XG.jpg",
+      daft: "https://i.imgur.com/3ndugq6.jpg",
+      daftHD: "https://i.imgur.com/bZQauq4.jpg",
       seconds: dataSecond,
       thirds: dataThird,
-    }
+    };
   },
   mounted() {
     this.sound = new Howl({
       src: [urna],
 
       onloaderror(id, err) {
-        console.warn('failed to load sound file:', { id, err })
+        console.warn("failed to load sound file:", { id, err });
       },
-    })
+    });
   },
   methods: {
     play() {
-      // this.sound.play()
-      setTimeout(() => (this.show = true), 300)
-      clearTimeout()
+      this.sound.play();
+      setTimeout(() => (this.show = true), 300);
+      clearTimeout();
     },
 
     showWinner() {},
   },
-}
+};
 </script>
 <style lang="scss">
 .text-size {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .fade-in-bottom {

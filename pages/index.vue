@@ -12,7 +12,7 @@
                 background-texture
                 marker-line
                 bg-teal
-                text-light
+                text-polen
                 px-md-4
                 py-md-3 py-2
                 px-3
@@ -21,27 +21,17 @@
             </span>
           </h1>
           <p class="font-monospace">
-            <span class="marker-line bg-teal text-light py-1">
+            <span class="marker-line bg-teal text-polen py-1">
               <i> Developed by Team Blklight</i>
             </span>
           </p>
           <h2 class="mt-3 mb-4" style="font-weight: 700">
-            <span class="marker-line bg-teal text-light py-1 px-3">
+            <span class="marker-line bg-teal text-polen py-1 px-3">
               <strong> <em>2021/2</em></strong>
             </span>
           </h2>
         </div>
-        <div class="container">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeBlvJtt2KIWEcPn9QVxAuM7UVy14kgwsB3XptSmth1yWRvRA/viewform?embedded=true"
-            width="100%"
-            height="1498"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            >Carregando…</iframe
-          >
-        </div>
+        <Winners />
       </div>
     </div>
   </div>
@@ -138,7 +128,7 @@ body {
 }
 
 .text-size {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .fade-in-bottom {
