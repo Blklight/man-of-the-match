@@ -27,7 +27,7 @@
           </p>
           <h2 class="mt-3 mb-4" style="font-weight: 700">
             <span class="marker-line bg-info text-polen py-1 px-3">
-              <strong> <em>2021/2</em></strong>
+              <strong> <em>2022/1</em></strong>
             </span>
           </h2>
         </div>
