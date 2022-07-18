@@ -31,17 +31,7 @@
             </span>
           </h2>
         </div>
-        <div class="card card-plain card-body">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSc7Jthd84mlCPyPdprtZiRPpRIUFOMtdBQhkxuEYXoIkcyoCQ/viewform?embedded=true"
-            width="100%"
-            height="2000"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            >Carregando…</iframe
-          >
-        </div>
+        <Winners />
       </div>
     </div>
   </div>
@@ -54,7 +44,9 @@ import urna from "~/assets/audio/urna.mp3";
 
 import dataSecond from "~/assets/data/seconds.json";
 import dataThird from "~/assets/data/thirds.json";
+import Winners from "~/components/Winners.vue";
 export default {
+  components: { Winners },
   data() {
     return {
       sound: "",
@@ -77,7 +69,6 @@ export default {
     };
     this.sound = new Howl({
       src: [urna],
-
       onloaderror(id, err) {
         // eslint-disable-next-line no-console
         console.warn("failed to load sound file:", { id, err });
@@ -90,9 +81,7 @@ export default {
       setTimeout(() => (this.show = true), 300);
       clearTimeout();
     },
-
     showWinner() {},
-
     headerChanger() {
       const headerNameFull = "#ManOfTheMatch";
       const headerNameShort = "#MOTM";

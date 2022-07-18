@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-for-template-key -->
 <template>
   <div class="container px-0">
     <div :class="show ? 'fade-out-bottom' : ''">
@@ -22,22 +23,23 @@
             <strong class="marker-line"><em>Vencedor(es)</em></strong>
           </span>
         </h2>
-        <img
-          v-lazy="winner"
-          class="img-fluid mx-auto d-block"
-          :alt="winnerName"
-          :title="winnerName"
-        />
-        <p class="text-info text-center my-3">
-          <em>
-            <a :href="winnerHD" class="text-polen mx-1" target="_blank">
-              <span class="marker-line bg-info text-polen py-1">
-                Clique aqui
-              </span>
-            </a>
-            para baixar a versão em HD.
-          </em>
-        </p>
+        <div v-for="(winner, i) in winners" :key="i">
+          <img v-lazy="winner.winner" class="img-fluid mx-auto d-block" />
+          <p class="text-info text-center my-3">
+            <em>
+              <a
+                :href="winner.winnerHD"
+                class="text-polen mx-1"
+                target="_blank"
+              >
+                <span class="marker-line bg-info text-polen py-1">
+                  Clique aqui
+                </span>
+              </a>
+              para baixar a versão em HD.
+            </em>
+          </p>
+        </div>
       </div>
       <div class="font-monospace mb-5">
         <h3 class="mb-3">
@@ -103,9 +105,21 @@ export default {
     return {
       sound: "",
       show: false,
-      winnerName: "Ultimate",
-      winner: "https://i.imgur.com/tjVBugA.jpg",
-      winnerHD: "https://i.imgur.com/fKMl9XG.jpg",
+      winners: [
+        {
+          winner: "https://i.imgur.com/XIua835.jpg",
+          winnerHD: "https://i.imgur.com/djmCr5e.jpg",
+        },
+        {
+          winner: "https://i.imgur.com/5irOkhi.jpg",
+          winnerHD: "https://i.imgur.com/Csrx4M5.jpg",
+        },
+        {
+          winner: "https://i.imgur.com/lEm9eNK.jpg",
+          winnerHD: "https://i.imgur.com/eHpB9xX.jpg",
+        },
+      ],
+
       daft: "https://i.imgur.com/3ndugq6.jpg",
       daftHD: "https://i.imgur.com/bZQauq4.jpg",
       seconds: dataSecond,
