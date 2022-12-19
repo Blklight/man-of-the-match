@@ -11,7 +11,7 @@
               class="
                 background-texture
                 marker-line
-                bg-info
+                bg-pink
                 text-polen
                 px-md-4
                 py-md-3 py-2
@@ -20,18 +20,31 @@
             >
             </span>
           </h1>
-          <p class="font-monospace">
-            <span class="marker-line bg-info text-polen py-1">
-              <i> Developed by Team Blklight</i>
+          <p>
+            <span
+              class="marker-line bg-pink text-polen py-1"
+              style="font-weight: 500"
+            >
+              Developed by Team Blklight
             </span>
           </p>
           <h2 class="mt-3 mb-4" style="font-weight: 700">
-            <span class="marker-line bg-info text-polen py-1 px-3">
-              <strong> <em>2022/1</em></strong>
+            <span class="marker-line bg-pink text-polen py-1 px-3">
+              <strong> 2022/2</strong>
             </span>
           </h2>
         </div>
-        <Winners />
+        <div class="card card-plain card-body">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdNn2KAyW3Wlga6rVJumA9z5oXVxf0n8oMftKjYH_07GEcj5w/viewform?embedded=true"
+            width="100%"
+            height="2587"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            >Carregando…</iframe
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -44,9 +57,9 @@ import urna from "~/assets/audio/urna.mp3";
 
 import dataSecond from "~/assets/data/seconds.json";
 import dataThird from "~/assets/data/thirds.json";
-import Winners from "~/components/Winners.vue";
+// import Winners from "~/components/Winners.vue";
 export default {
-  components: { Winners },
+  // components: { Winners },
   data() {
     return {
       sound: "",
@@ -98,12 +111,22 @@ export default {
 <style lang="scss">
 body {
   background-color: #121212;
+  font-family: "Barlow", sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Barlow", sans-serif !important;
+}
+
 .main-title {
   font-weight: 900;
-  font-style: italic;
   font-size: 88px;
-  font-family: "Exo", sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 @media screen and (max-width: 992px) {
   .main-title {
