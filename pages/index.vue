@@ -34,17 +34,8 @@
             </span>
           </h2>
         </div>
-        <div class="card card-plain card-body">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdNn2KAyW3Wlga6rVJumA9z5oXVxf0n8oMftKjYH_07GEcj5w/viewform?embedded=true"
-            width="100%"
-            height="2587"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            >Carregando…</iframe
-          >
-        </div>
+        <Winners />
+        <AllTimeChampions />
       </div>
     </div>
   </div>

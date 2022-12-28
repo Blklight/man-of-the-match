@@ -69,6 +69,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     "@nuxtjs/eslint-module",
+    "@nuxtjs/fontawesome",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -111,6 +112,40 @@ export default {
           name: "[path][name].[ext]",
         },
       });
+    },
+  },
+
+  fontawesome: {
+    icons: {
+      solid: [
+        "faEnvelope",
+        "faAdjust",
+        "faBars",
+        "faSun",
+        "faMoon",
+        "faCode",
+        "faTerminal",
+        "faLaptopCode",
+        "faPlus",
+        "faTimes",
+        "faWindowClose",
+        "faChevronRight",
+        "faChevronLeft",
+        "faChevronDown",
+        "faSearch",
+        "faHome",
+        "faStar",
+      ],
+      regular: ["faSun", "faMoon", "faWindowClose"],
+      brands: [
+        "faFacebookF",
+        "faGithub",
+        "faMediumM",
+        "faBehance",
+        "faLinkedinIn",
+        "faInstagram",
+        "faTwitch",
+      ],
     },
   },
 };

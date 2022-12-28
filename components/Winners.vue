@@ -4,7 +4,7 @@
     <div :class="show ? 'fade-out-bottom' : ''">
       <button
         class="
-          btn btn-raised btn-flat btn-block btn-lg btn-pink
+          btn btn-flat btn-block btn-lg btn-pink
           text-polen
           mx-auto
           d-block
@@ -79,7 +79,7 @@
         </h2>
         <h4 class="bg-pink text-polen py-2 px-2 mb-3">
           <span class="">
-            <strong>Daft Vitola - Wallpaper </em></strong>
+            <strong>Daft Vitola - Wallpaper</strong>
           </span>
         </h4>
         <img
@@ -117,16 +117,12 @@ export default {
       show: false,
       winners: [
         {
-          winner: "https://i.imgur.com/XIua835.jpg",
-          winnerHD: "https://i.imgur.com/djmCr5e.jpg",
+          winner: "https://i.imgur.com/e1Aozbe.jpg",
+          winnerHD: "https://i.imgur.com/tZzDZQf.jpg",
         },
         {
-          winner: "https://i.imgur.com/5irOkhi.jpg",
-          winnerHD: "https://i.imgur.com/Csrx4M5.jpg",
-        },
-        {
-          winner: "https://i.imgur.com/lEm9eNK.jpg",
-          winnerHD: "https://i.imgur.com/eHpB9xX.jpg",
+          winner: "https://i.imgur.com/NzVth6F.jpg",
+          winnerHD: "https://i.imgur.com/C63Pbh5.jpg",
         },
       ],
 
@@ -152,8 +148,6 @@ export default {
       setTimeout(() => (this.show = true), 300);
       clearTimeout();
     },
-
-    showWinner() {},
   },
 };
 </script>
