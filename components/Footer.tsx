@@ -6,15 +6,7 @@ const Footer = () => {
         <div className="container mx-auto">
           <img
             src="/blklight-white.svg"
-            className="mx-auto hidden dark:block"
-            width="50"
-            height="50"
-            alt="Ultimate Mercer Logo"
-          />
-
-          <img
-            src="/blklight-black.svg"
-            className="mx-auto block dark:hidden"
+            className="mx-auto block"
             width="50"
             height="50"
             alt="Ultimate Mercer Logo"

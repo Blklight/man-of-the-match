@@ -7,11 +7,19 @@ import { cn } from "@/lib/utils";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import { getAllChampions } from "@/lib/services";
 import ChampionCard from "@/components/ChampionCard";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import { useState } from "react";
 
 export const metadata: Metadata = {
   title: "#ManOfTheMatch",
@@ -25,6 +33,7 @@ export async function getStaticProps() {
 
 const Home = ({ champions }: any) => {
   // console.log(champions);
+  const [show, setShow] = useState(false);
 
   const sound = new Howl({
     src: ["/urna.mp3"],
@@ -33,6 +42,42 @@ const Home = ({ champions }: any) => {
       console.warn("failed to load sound file:", { id, err });
     },
   });
+
+  const winner = {
+    photo: "https://i.imgur.com/OTGx0TL.jpg",
+    photoHD: "https://i.imgur.com/2pyIRB3.jpg",
+  };
+
+  const seconds = [
+    {
+      quote: "Pra mim mulher tem que ter cabelo na bunda...",
+      name: "Ultimate Tanuke Sensei",
+    },
+    {
+      quote: "Tomei uma picada e fiquei dengoso",
+      name: "Entidade",
+    },
+  ];
+
+  const thirds = [
+    {
+      quote:
+        "Pensa por esse lado, se tu falhar mais cedo, a gente te xinga mais cedo",
+      name: "Ultimate",
+    },
+    {
+      quote: "Gente, só vou ver minha linguiça.",
+      name: "Ultimate Michele Zurigi Zimbabue",
+    },
+    {
+      quote: "Puta que pariu, o Luigi pegou meu homem",
+      name: "Ultimate Tanuke Sensei",
+    },
+    {
+      quote: "Esse não curte muito, mas o outro mamava que parecia um bezerro!",
+      name: "Ultimate Michele Zurigi Zimbabue",
+    },
+  ];
 
   const play = () => {
     sound.play();
@@ -64,8 +109,79 @@ const Home = ({ champions }: any) => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="season" className="glass">
-            <div className=" card card-plain card-body">
-              <iframe
+            <div className="card card-plain card-body">
+              <Button
+                className="bg-purple-500 hover:bg-indigo-800 text-polen-500 text-xl"
+                size={"lg"}
+                onClick={() => {
+                  play();
+                  setShow(!show);
+                }}
+              >
+                Champions of the season
+              </Button>
+              {show && (
+                <section
+                  className={`my-5 transition-all ${
+                    show ? "fade-in-bottom" : "fade-out-bottom"
+                  }`}
+                >
+                  <div className="mb-4">
+                    <h3 className="text-3xl font-bold bg-purple-500 text-polen-500 tracking-wide mb-2">
+                      <span className="marker-line"> Winner(s) </span>
+                    </h3>
+                    <img
+                      src={winner.photo}
+                      className="w-full h-auto mx-auto my-4"
+                      alt={`avatar`}
+                    />
+                    <div className="flex justify-center my-2">
+                      <Button
+                        className="bg-purple-500 hover:bg-indigo-800 text-polen-500 rounded-sm"
+                        size={"sm"}
+                        asChild
+                      >
+                        <Link href={winner.photoHD} target="_blank">
+                          Download HD Version
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="text-2xl font-bold bg-purple-500 text-polen-500 mb-2">
+                      <span className="marker-line"> 2ª place</span>
+                    </h4>
+                    <div className="px-2">
+                      {seconds.map((second, key) => (
+                        <p
+                          key={key}
+                          className="text-xl text-polen-500 font-medium mb-2"
+                        >
+                          {second.quote} - {second.name}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="text-2xl font-bold bg-purple-500 text-polen-500 mb-2">
+                      <span className="marker-line"> 3ª place</span>
+                    </h4>
+                    <div className="px-2">
+                      {thirds.map((third, key) => (
+                        <p
+                          key={key}
+                          className="text-xl text-polen-500 font-medium mb-2"
+                        >
+                          {third.quote} - {third.name}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              )}
+
+              {/* <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSf5h6E2aKVPbPTamDR8dAixaxKfg2WKVJrvJQv85M4tUcwfcg/viewform?embedded=true"
                 width=""
                 height="1767"
@@ -75,7 +191,7 @@ const Home = ({ champions }: any) => {
                 }}
               >
                 Carregando…
-              </iframe>
+              </iframe> */}
             </div>
           </TabsContent>
           <TabsContent value="champions" className="!transparent py-4">
