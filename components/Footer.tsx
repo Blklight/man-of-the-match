@@ -5,7 +5,7 @@ const Footer = () => {
       <footer className="max-w-full pt-4 px-6 pb-12">
         <div className="container mx-auto">
           <img
-            src="/blklight-white.svg"
+            src="/blklight-black.svg"
             className="mx-auto block"
             width="50"
             height="50"

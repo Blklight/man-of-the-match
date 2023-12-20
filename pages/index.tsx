@@ -90,10 +90,10 @@ const Home = ({ champions }: any) => {
       <div className="container mx-auto py-4">
         <div className="mb-5">
           <h1 className="lg:text-8xl text-6xl font-bold header-name mb-4">
-            <span className="background-texture marker-line !px-4 !py-3 bg-purple-500 text-polen-500"></span>
+            <span className="background-texture marker-line !px-4 !py-3 bg-orange-300 text-dark-500"></span>
           </h1>
           <p className="text-xl font-medium">
-            <span className="marker-line bg-purple-500 !px-3 !py-1 text-polen-500">
+            <span className="marker-line !px-3 !py-1 bg-orange-300 text-dark-500">
               Developed by Team Blklight
             </span>
           </p>
@@ -111,7 +111,7 @@ const Home = ({ champions }: any) => {
           <TabsContent value="season" className="glass">
             <div className="card card-plain card-body">
               <Button
-                className="bg-purple-500 hover:bg-indigo-800 text-polen-500 text-xl"
+                className="bg-orange-300 text-dark-500 hover:bg-orange-600 hover:text-light-500 text-xl"
                 size={"lg"}
                 onClick={() => {
                   play();
@@ -127,7 +127,7 @@ const Home = ({ champions }: any) => {
                   }`}
                 >
                   <div className="mb-4">
-                    <h3 className="text-3xl font-bold bg-purple-500 text-polen-500 tracking-wide mb-2">
+                    <h3 className="text-3xl font-bold bg-orange-300 text-dark-500 tracking-wide mb-2">
                       <span className="marker-line"> Winner(s) </span>
                     </h3>
                     <img
@@ -137,7 +137,7 @@ const Home = ({ champions }: any) => {
                     />
                     <div className="flex justify-center my-2">
                       <Button
-                        className="bg-purple-500 hover:bg-indigo-800 text-polen-500 rounded-sm"
+                        className="bg-orange-300 text-dark-500 hover:bg-orange-600 hover:text-light-500 rounded-sm"
                         size={"sm"}
                         asChild
                       >
@@ -149,14 +149,14 @@ const Home = ({ champions }: any) => {
                   </div>
 
                   <div className="mb-4">
-                    <h4 className="text-2xl font-bold bg-purple-500 text-polen-500 mb-2">
+                    <h4 className="text-2xl font-bold bg-orange-300 text-dark-500 mb-2">
                       <span className="marker-line"> 2ª place</span>
                     </h4>
                     <div className="px-2">
                       {seconds.map((second, key) => (
                         <p
                           key={key}
-                          className="text-xl text-polen-500 font-medium mb-2"
+                          className="text-xl text-dark-500 font-medium mb-2"
                         >
                           {second.quote} - {second.name}
                         </p>
@@ -164,14 +164,14 @@ const Home = ({ champions }: any) => {
                     </div>
                   </div>
                   <div className="mb-4">
-                    <h4 className="text-2xl font-bold bg-purple-500 text-polen-500 mb-2">
+                    <h4 className="text-2xl font-bold bg-orange-300 text-dark-500 mb-2">
                       <span className="marker-line"> 3ª place</span>
                     </h4>
                     <div className="px-2">
                       {thirds.map((third, key) => (
                         <p
                           key={key}
-                          className="text-xl text-polen-500 font-medium mb-2"
+                          className="text-xl text-dark-500 font-medium mb-2"
                         >
                           {third.quote} - {third.name}
                         </p>
@@ -202,7 +202,7 @@ const Home = ({ champions }: any) => {
 
           <TabsContent value="bonus" className="glass">
             <div className="card card-plain card-body">
-              <h3 className="text-3xl font-bold bg-purple-500 text-polen-500 mb-4">
+              <h3 className="text-3xl font-bold bg-orange-300 text-dark-500 mb-4">
                 <span className="marker-line !py-1">
                   Daft Vitola - Wallpaper
                 </span>
@@ -215,7 +215,7 @@ const Home = ({ champions }: any) => {
               <Button asChild>
                 <Link
                   href={"https://i.imgur.com/bZQauq4.jpg"}
-                  className="bg-purple-500 text-polen-500 flex"
+                  className="bg-orange-300 text-dark-500 hover:bg-orange-600 hover:text-light-500 flex"
                   target="_blank"
                 >
                   Clique aqui para fazer o download da versão em HD.

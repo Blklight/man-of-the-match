@@ -34,7 +34,7 @@ const ChampionCard = ({ champion }: any) => {
                   <Star
                     size={36}
                     weight="duotone"
-                    className="text-purple-400"
+                    className="text-orange-400"
                   />
                 </TooltipTrigger>
                 <TooltipContent side="bottom">
@@ -53,7 +53,7 @@ const ChampionCard = ({ champion }: any) => {
               {champion.championships.map((quote: any) => (
                 <div className="mb-3" key={quote.quote}>
                   <h5 className="text-xl font-bold tracking-wider mb-2">
-                    <span className="marker-line bg-purple-500 text-polen-500 !py-1">
+                    <span className="marker-line bg-orange-300 text-dark-500 !py-1">
                       {quote.period}
                     </span>
                   </h5>
