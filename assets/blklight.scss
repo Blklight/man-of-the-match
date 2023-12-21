@@ -94,6 +94,11 @@
   }
 }
 
+.iframe-style-force {
+  background-color: transparent !important;
+  border-radius: 0.5rem;
+}
+
 @import "scss/mixins";
 @import "scss/base";
 @import "scss/extra";

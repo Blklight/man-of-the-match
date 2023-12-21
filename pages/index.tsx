@@ -100,7 +100,7 @@ const Home = ({ champions }: any) => {
         </div>
         <Tabs defaultValue="season" className="w-full">
           <TabsList>
-            <TabsTrigger value="season">Votes - 2023/1 </TabsTrigger>
+            <TabsTrigger value="season">Votes - 2023/2 </TabsTrigger>
             <TabsTrigger value="champions" onClick={() => play()}>
               All Time Champions
             </TabsTrigger>
@@ -110,7 +110,7 @@ const Home = ({ champions }: any) => {
           </TabsList>
           <TabsContent value="season" className="glass">
             <div className="card card-plain card-body">
-              <Button
+              {/* <Button
                 className="bg-orange-300 text-dark-500 hover:bg-orange-600 hover:text-light-500 text-xl"
                 size={"lg"}
                 onClick={() => {
@@ -179,19 +179,16 @@ const Home = ({ champions }: any) => {
                     </div>
                   </div>
                 </section>
-              )}
+              )} */}
 
-              {/* <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSf5h6E2aKVPbPTamDR8dAixaxKfg2WKVJrvJQv85M4tUcwfcg/viewform?embedded=true"
-                width=""
-                height="1767"
-                style={{
-                  backgroundColor: "transparent !important",
-                  borderRadius: "4px",
-                }}
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdHI-S2U_-gxiJxffuGQCgSYPouCzkH2vqhkonYSEVhOItRUw/viewform?embedded=true"
+                width="640"
+                height="2550"
+                className="iframe-style-force mx-auto block"
               >
                 Carregando…
-              </iframe> */}
+              </iframe>
             </div>
           </TabsContent>
           <TabsContent value="champions" className="!transparent py-4">
@@ -212,7 +209,10 @@ const Home = ({ champions }: any) => {
                 className="w-full h-auto mx-auto mb-4"
                 alt=""
               />
-              <Button asChild>
+              <Button
+                className="bg-orange-300 text-dark-500 hover:bg-orange-600 hover:text-light-500"
+                asChild
+              >
                 <Link
                   href={"https://i.imgur.com/bZQauq4.jpg"}
                   className="bg-orange-300 text-dark-500 hover:bg-orange-600 hover:text-light-500 flex"
