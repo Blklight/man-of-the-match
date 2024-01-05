@@ -52,12 +52,12 @@ const ChampionCard = ({ champion }: any) => {
             <AccordionContent>
               {champion.championships.map((quote: any) => (
                 <div className="mb-3" key={quote.quote}>
-                  <h5 className="text-xl font-bold tracking-wider mb-2">
+                  <h5 className="text-2xl font-bold tracking-wider mb-2">
                     <span className="marker-line bg-orange-300 text-dark-500 !py-1">
                       {quote.period}
                     </span>
                   </h5>
-                  <p className="text-lg font-medium">{quote.quote}</p>
+                  <p className="text-xl font-medium">{quote.quote}</p>
                 </div>
               ))}
             </AccordionContent>

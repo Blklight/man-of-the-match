@@ -32,7 +32,6 @@ export async function getStaticProps() {
 }
 
 const Home = ({ champions }: any) => {
-  // console.log(champions);
   const [show, setShow] = useState(false);
 
   const sound = new Howl({
@@ -43,39 +42,28 @@ const Home = ({ champions }: any) => {
     },
   });
 
-  const winner = {
-    photo: "https://i.imgur.com/OTGx0TL.jpg",
-    photoHD: "https://i.imgur.com/2pyIRB3.jpg",
-  };
+  const winners = [
+    {
+      photo: "https://i.imgur.com/nQ1MWHe.jpg",
+      photoHD: "https://i.imgur.com/ENK4JCt.jpg",
+    },
+    {
+      photo: "https://i.imgur.com/hW3jzGf.jpg",
+      photoHD: "https://i.imgur.com/HFS85z7.jpg",
+    },
+  ];
 
   const seconds = [
     {
-      quote: "Pra mim mulher tem que ter cabelo na bunda...",
-      name: "Ultimate Tanuke Sensei",
-    },
-    {
-      quote: "Tomei uma picada e fiquei dengoso",
-      name: "Entidade",
+      quote: "Sentimento muito bom, é comer casada.",
+      name: "Ultimate WNDL",
     },
   ];
 
   const thirds = [
     {
-      quote:
-        "Pensa por esse lado, se tu falhar mais cedo, a gente te xinga mais cedo",
+      quote: "O cara que respira tecnologia é o rodrigo que usa nebulizador",
       name: "Ultimate",
-    },
-    {
-      quote: "Gente, só vou ver minha linguiça.",
-      name: "Ultimate Michele Zurigi Zimbabue",
-    },
-    {
-      quote: "Puta que pariu, o Luigi pegou meu homem",
-      name: "Ultimate Tanuke Sensei",
-    },
-    {
-      quote: "Esse não curte muito, mas o outro mamava que parecia um bezerro!",
-      name: "Ultimate Michele Zurigi Zimbabue",
     },
   ];
 
@@ -110,7 +98,7 @@ const Home = ({ champions }: any) => {
           </TabsList>
           <TabsContent value="season" className="glass">
             <div className="card card-plain card-body">
-              {/* <Button
+              <Button
                 className="bg-orange-300 text-dark-500 hover:bg-orange-600 hover:text-light-500 text-xl"
                 size={"lg"}
                 onClick={() => {
@@ -130,22 +118,26 @@ const Home = ({ champions }: any) => {
                     <h3 className="text-3xl font-bold bg-orange-300 text-dark-500 tracking-wide mb-2">
                       <span className="marker-line"> Winner(s) </span>
                     </h3>
-                    <img
-                      src={winner.photo}
-                      className="w-full h-auto mx-auto my-4"
-                      alt={`avatar`}
-                    />
-                    <div className="flex justify-center my-2">
-                      <Button
-                        className="bg-orange-300 text-dark-500 hover:bg-orange-600 hover:text-light-500 rounded-sm"
-                        size={"sm"}
-                        asChild
-                      >
-                        <Link href={winner.photoHD} target="_blank">
-                          Download HD Version
-                        </Link>
-                      </Button>
-                    </div>
+                    {winners.map((winner, index) => (
+                      <div key={index}>
+                        <img
+                          src={winner.photo}
+                          className="w-full h-auto mx-auto my-4"
+                          alt={`avatar`}
+                        />
+                        <div className="flex justify-center my-2">
+                          <Button
+                            className="bg-orange-300 text-dark-500 hover:bg-orange-600 hover:text-light-500 rounded-sm"
+                            size={"sm"}
+                            asChild
+                          >
+                            <Link href={winner.photoHD} target="_blank">
+                              Download HD Version
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                    ))}
                   </div>
 
                   <div className="mb-4">
@@ -179,16 +171,16 @@ const Home = ({ champions }: any) => {
                     </div>
                   </div>
                 </section>
-              )} */}
+              )}
 
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSdHI-S2U_-gxiJxffuGQCgSYPouCzkH2vqhkonYSEVhOItRUw/viewform?embedded=true"
+              {/* <iframe
+                src=""
                 width="640"
                 height="2550"
                 className="iframe-style-force mx-auto block"
               >
                 Carregando…
-              </iframe>
+              </iframe> */}
             </div>
           </TabsContent>
           <TabsContent value="champions" className="!transparent py-4">
